@@ -1,0 +1,32 @@
+Main Header
+===========
+Optional Author Name <optional@author.email>
+Optional version, optional date
+:Author:    AlternativeWayToSetOptional Craig Buchanan
+:Email:     <AlternativeWayToSetOptional@author.email>
+:Date:      AlternativeWayToSetOptional date
+:Revision:  AlternativeWayToSetOptional version
+
+== Level 1
+Text.
+
+=== Level 2
+Text.
+
+.Optional Title
+[source,crystal]
+----
+# *Source* block
+# Use: highlight code listings
+# (require `source-highlight` or `pygmentize`)
+function ()
+
+	// comment
+	stringvar array list := ["A","B","C"]
+	numbervar i;
+	for i := 1 to ubound(list) do (
+		list[i] := list[i]+"F"
+	);
+	join(list, ";");
+
+----
