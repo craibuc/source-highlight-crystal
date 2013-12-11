@@ -1,30 +1,27 @@
-# language definition for Crystal Reports' formula language
+#
+# author:	Craig Buchanan (craig.buchanan@cogniza.com)
+# created:	2013/12/11
+# purpose:	language definition for Crystal Reports' formula language
+#
+
+# vardef SPECIALCHAR = '\\.'
+
+cbracket = "{|}|?|@"
 
 comment start "//"
 
-environment comment delim "(*" "*)" multiline begin
-  include "url.lang"
-  include "todo.lang"
-end
+function = "abs|sgn|int|round|roundup|truncate|mround|ceiling|floor|remainder|sin|cos|tan|atn|pi|sqr|exp|log",
+	"join|ubound" nonsensitive
 
-vardef SPECIALCHAR = '\\.'
+keyword = "if|then|else|for|to|do|exit|while|select|case|default" nonsensitive
 
-environment string delim "\"" "\"" begin
-  specialchar = $SPECIALCHAR
-end
+symbol = "true|false|and|or" nonsensitive
 
-keyword = "and",
-	"for|to"
-	"do|while|exit",
-	"if|then|else|exit",
-	"local|global|shared",
-	"booleanvar|currencyvar|datevar|datetimevar|numbervar|stringvar|timevar",
-	"abs|sgn|int|round|roundup|truncate|mround|ceiling|floor|remainder|sin|cos|tan|atn|pi|sqr|exp|log"
-	nonsensitive
+type = "local|global|shared|booleanvar|currencyvar|datevar|datetimevar|numbervar|stringvar|timevar|array|range|optional" nonsensitive
+
+string delim "\"" "\""
+string delim "'" "'"
 
 include "function.lang"
-
-cbracket = "{|}"
-
 include "symbols.lang"
 include "number.lang"

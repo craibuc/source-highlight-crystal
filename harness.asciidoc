@@ -1,32 +1,46 @@
 Main Header
 ===========
-Optional Author Name <optional@author.email>
-Optional version, optional date
-:Author:    AlternativeWayToSetOptional Craig Buchanan
-:Email:     <AlternativeWayToSetOptional@author.email>
-:Date:      AlternativeWayToSetOptional date
-:Revision:  AlternativeWayToSetOptional version
+// Craig Buchanan <craibuc@gmail.com>
+// 0.1.0, 2013/12/11
+
+:Author:    Craig Buchanan
+:Email:     <craibuc@gmail.com>
+:Date:      11-DEC-2013
+:Revision:  0.1.0
 
 == Level 1
-Text.
+The author is *{author}* ({email}).  Revision *{revision}* was created on {date}.
 
 === Level 2
 Text.
 
-.Optional Title
+.Harness()
 [source,crystal]
 ----
-# *Source* block
-# Use: highlight code listings
-# (require `source-highlight` or `pygmentize`)
-function ()
+# author:	Craig Buchanan
+# created:	11-DEC-2013
+# purpose:	test various language elements
+function (numbervar arg0, optional stringvar arg1)
 
-	// comment
-	stringvar array list := ["A","B","C"]
-	numbervar i;
-	for i := 1 to ubound(list) do (
-		list[i] := list[i]+"F"
-	);
-	join(list, ";");
+  local booleanvar foo := true;
+  local numbervar x := 1;
+  
+  if arg0="A" then
+    'branch a'
+  else if arg0='B' then
+    "branch b"
+  else
+    "branch c"
+  ;
+  
+  // comment
+  stringvar array list := ["A","B","C"]
+  numbervar i;
+  for i := 1 to ubound(list) do (
+  	list[i] := list[i]+"F"
+  );
+
+  // return list
+  join(list, ";");
 
 ----
