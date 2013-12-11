@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+
+<article lang="en">
+<articleinfo>
+    <title>Main Header</title>
+    <date>optional date</date>
+    <author>
+        <firstname>Optional</firstname>
+        <othername>Author</othername>
+        <surname>Name</surname>
+        <email>&lt;AlternativeWayToSetOptional@author.email&gt;</email>
+    </author>
+    <authorinitials>OAN</authorinitials>
+<revhistory><revision><revnumber>AlternativeWayToSetOptional version</revnumber><date>optional date</date><authorinitials>OAN</authorinitials></revision></revhistory>
+</articleinfo>
+<section id="_level_1">
+<title>Level 1</title>
+<simpara>Text.</simpara>
+<section id="_level_2">
+<title>Level 2</title>
+<simpara>Text.</simpara>
+<formalpara><title>Optional Title</title><para>
+<programlisting language="crystal" linenumbering="unnumbered"># *Source* block
+# Use: highlight code listings
+# (require `source-highlight` or `pygmentize`)
+function ()
+
+        // comment
+        stringvar array list := ["A","B","C"]
+        numbervar i;
+        for i := 1 to ubound(list) do (
+                list[i] := list[i]+"F"
+        );
+        join(list, ";");</programlisting>
+</para></formalpara>
+</section>
+</section>
+</article>
